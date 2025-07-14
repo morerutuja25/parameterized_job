@@ -20,7 +20,7 @@ pipeline {
                 sh '''
                 cd /opt
                	sudo wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
-                sudo unzip terraform_${terraform_version}_linux_amd64.zip
+              
                 '''
             }
         }
