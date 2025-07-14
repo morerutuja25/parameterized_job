@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('Download Maven') {
             steps {
-		    
-                sh '''withCredentials([usernamePassword(credentialsId: 'aws-credentials-id', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+		sh '''
                 cd /var/lib/jenkins/
                 sudo wget https://archive.apache.org/dist/maven/maven-3/${maven_version}/binaries/apache-maven-${maven_version}-bin.tar.gz
                 '''
